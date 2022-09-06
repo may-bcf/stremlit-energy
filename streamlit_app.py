@@ -53,7 +53,7 @@ if x_axis and y_axis:
 
 st.sidebar.markdown("### Bar Chart: Production of Energy Types per Country : ")
 
-avg_production_df = production_df.groupby(by=["Country"]).mean()
+avg_production_df = production_df.groupby(by=["Country"]).sum()
 
 bar_axis = st.sidebar.multiselect(label="Bar Chart Ingredient", options=avg_production_df.columns.tolist(),
                                   default=["solar", "gas", "coal"])
